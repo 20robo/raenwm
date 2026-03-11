@@ -1,5 +1,7 @@
 # RAE-NWM: Navigation World Model in Dense Visual Representation Space
 
+[**Paper**](https://arxiv.org/abs/2603.09241) | [**Models**](#) *(Coming Soon)*
+
 > **Note:** This repository contains the official implementation of RAE-NWM. 
 > The pre-trained RAE-NWM weights and complete model cards will be released here soon.
 
