@@ -13,9 +13,9 @@ def wrap_to_pi(x: torch.Tensor) -> torch.Tensor:
 
 def _to_bchw(latent: torch.Tensor, hw: Optional[Tuple[int, int]] = None) -> torch.Tensor:
     """
-    支持两种输入格式：
-    - (B, C, H, W): 原样返回
-    - (B, N, C): 推断/使用 hw，将 token reshape 成 (B,C,H,W)
+    Supports two input formats:
+    - (B, C, H, W): returned as-is
+    - (B, N, C): infer/use hw and reshape tokens to (B, C, H, W)
     """
     if latent.dim() == 4:
         return latent

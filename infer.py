@@ -415,7 +415,7 @@ def main(args):
             
         
         if not os.path.exists(checkpoint_path):
-            raise FileNotFoundError(f"权重文件不存在: {checkpoint_path}")
+            raise FileNotFoundError(f"Checkpoint file not found: {checkpoint_path}")
             
         ckp = torch.load(checkpoint_path, map_location='cpu', weights_only=False)
         _state = {k.replace('_orig_mod.', ''): v for k, v in ckp.get("ema", {}).items()}
@@ -599,10 +599,10 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", type=str, default=None, help="output directory")
     parser.add_argument("--exp", type=str, default=None, help="experiment name")
     parser.add_argument("--ckp", type=str, default='0100000')
-    parser.add_argument("--checkpoint_path", type=str, default=None, help="完整的权重文件路径，如果指定则忽略--ckp参数")
-    parser.add_argument("--eval_min_dist_cat", type=int, default=None, help="覆盖 eval_distance.eval_min_dist_cat（本次运行）")
-    parser.add_argument("--eval_max_dist_cat", type=int, default=None, help="覆盖 eval_distance.eval_max_dist_cat（本次运行）")
-    parser.add_argument("--eval_len_traj_pred", type=int, default=None, help="覆盖 eval_len_traj_pred（本次运行）")
+    parser.add_argument("--checkpoint_path", type=str, default=None, help="Full checkpoint file path; if provided, --ckp is ignored")
+    parser.add_argument("--eval_min_dist_cat", type=int, default=None, help="Override eval_distance.eval_min_dist_cat for this run")
+    parser.add_argument("--eval_max_dist_cat", type=int, default=None, help="Override eval_distance.eval_max_dist_cat for this run")
+    parser.add_argument("--eval_len_traj_pred", type=int, default=None, help="Override eval_len_traj_pred for this run")
     parser.add_argument("--num_sec_eval", type=int, default=5)
     parser.add_argument("--input_fps", type=int, default=4)
     parser.add_argument("--datasets", type=str, default=None, help="dataset name")
@@ -614,7 +614,7 @@ if __name__ == "__main__":
     parser.add_argument("--gt", type=int, default=0, help="set to 1 to produce ground truth evaluation set")
     parser.add_argument("--sampling_method", type=str, default="euler")
     parser.add_argument("--num_steps", type=int, default=50)
-    parser.add_argument("--max_ids", type=int, default=0, help="最多生成/处理多少个 sample id（0 表示不限制）")
+    parser.add_argument("--max_ids", type=int, default=0, help="Max number of sample IDs to generate/process (0 means no limit)")
     args = parser.parse_args()
     
     args.rollout_fps_values = [int(fps) for fps in args.rollout_fps_values.split(',')]

@@ -458,9 +458,9 @@ if __name__ == "__main__":
     parser.add_argument("--input_fps", type=int, default=4, help="input fps")
     parser.add_argument("--rollout_fps_values", type=str, default='1,4', help="rollout fps values")
     parser.add_argument("--exp", type=str, default=None, help="experiment name")
-    parser.add_argument("--match_mode", type=str, default="auto", help="GT/PRED 匹配策略: strict|intersection|auto")
-    parser.add_argument("--max_trajs", type=int, default=0, help="最多评测多少条轨迹（0 表示不限制）")
-    parser.add_argument("--rollout_last_idx", type=int, default=63, help="rollout 模式下最多评测到的最后一帧 idx（例如 63），默认 63")
+    parser.add_argument("--match_mode", type=str, default="auto", help="GT/PRED matching strategy: strict|intersection|auto")
+    parser.add_argument("--max_trajs", type=int, default=0, help="Max number of trajectories to evaluate (0 means no limit)")
+    parser.add_argument("--rollout_last_idx", type=int, default=63, help="In rollout mode, last frame idx to evaluate (e.g., 63), default 63")
     
     args = parser.parse_args()
     

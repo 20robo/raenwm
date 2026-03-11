@@ -33,7 +33,7 @@ pip install "numpy<2" omegaconf huggingface_hub decord einops evo transformers d
 ## 📂 Data Preparation
 
 To download and preprocess data, please follow the steps from [NoMaD](https://github.com/robodhruv/visualnav-transformer?tab=readme-ov-file#data-wrangling). 
-Specifically, after downloading the datasets, run `process_bags.py` and `process_recon.py` to save each processed dataset to `path/to/nwm_repo/data/<dataset_name>`.
+Specifically, after downloading the datasets, run `process_bags.py` and `process_recon.py` to save each processed dataset to `path/to/raenwm/data/<dataset_name>`.
 
 Your final data directory structure should look like this:
 
