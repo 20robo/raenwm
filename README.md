@@ -63,7 +63,7 @@ We follow the official [RAE](https://github.com/bytetriper/RAE) instructions to 
 ```bash
 # Optional: Login is usually not required for public models. 
 # If you encounter download issues, use the command below to log in.
-# hf login
+# hf auth login
 # (Legacy command: huggingface-cli login)
 
 mkdir -p models
