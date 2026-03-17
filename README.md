@@ -61,13 +61,26 @@ raenwm/data
 We follow the official [RAE](https://github.com/bytetriper/RAE) instructions to download the DINOv2 decoder weights and normalization stats:
 
 ```bash
-huggingface-cli login
+# Optional: Login is usually not required for public models. 
+# If you encounter download issues, use the command below to log in.
+# hf login
+# (Legacy command: huggingface-cli login)
+
 mkdir -p models
-huggingface-cli download nyu-visionx/RAE-collections \
+
+# Download using the hf command
+hf download nyu-visionx/RAE-collections \
   --repo-type model \
   --include "decoders/dinov2/wReg_base/ViTXL_n08/model.pt" \
   --include "stats/dinov2/wReg_base/imagenet1k/stat.pt" \
   --local-dir ./models
+
+# If the `hf` command is not recognized in your environment, use the legacy command instead:
+# huggingface-cli download nyu-visionx/RAE-collections \
+#   --repo-type model \
+#   --include "decoders/dinov2/wReg_base/ViTXL_n08/model.pt" \
+#   --include "stats/dinov2/wReg_base/imagenet1k/stat.pt" \
+#   --local-dir ./models
 ```
 
 ### 2. RAE-NWM Weights
@@ -82,6 +95,12 @@ torchrun --nproc_per_node=8 train.py ...
 ```
 
 ## 🚀 Training
+
+We support WandB for experiment tracking. Before starting the training process, it is recommended to log in to your WandB account:
+
+```bash
+wandb login
+```
 
 To train the model from scratch, run:
 
@@ -144,3 +163,15 @@ python train_probe.py \
 ## 🙏 Acknowledgements
 
 Our project is inspired by and built upon [RAE](https://github.com/bytetriper/RAE), [NWM](https://github.com/facebookresearch/nwm), and [NoMaD](https://github.com/robodhruv/visualnav-transformer).
+
+## 📝 Citation
+
+If you find our work helpful, please consider citing our paper:
+
+```bibtex
+@article{zhang2026rae,
+  title={RAE-NWM: Navigation World Model in Dense Visual Representation Space},
+  author={Zhang, Mingkun and Shen, Wangtian and Zhang, Fan and Qin, Haijian and Pei, Zihao and Meng, Ziyang},
+  journal={arXiv preprint arXiv:2603.09241},
+  year={2026}
+}
