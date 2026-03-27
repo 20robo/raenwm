@@ -17,4 +17,4 @@ __pycache__/
 
 .ipynb_checkpoints/
 .DS_Store
-Thumbs.db
+Thumbs.db.cursorignore
