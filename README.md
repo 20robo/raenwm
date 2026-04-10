@@ -27,7 +27,7 @@ pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https
 
 # Install dependencies
 conda install -y ffmpeg
-pip install "numpy<2" omegaconf huggingface_hub decord einops evo transformers diffusers tqdm timm notebook dreamsim torcheval lpips ipywidgets accelerate==0.23.0 torchdiffeq==0.2.5 wandb
+pip install "numpy<2" omegaconf huggingface_hub decord einops evo transformers diffusers tqdm timm notebook dreamsim torcheval lpips ipywidgets accelerate>=0.26.0 torchdiffeq==0.2.5 wandb
 ```
 
 ## 📂 Data Preparation
