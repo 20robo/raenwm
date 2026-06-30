@@ -1,16 +1,16 @@
 # RAE-NWM: Navigation World Model in Dense Visual Representation Space
 
-[**Paper**](https://arxiv.org/abs/2603.09241) | [**Models**](#) *(Coming Soon)*
+[**Paper**](https://arxiv.org/abs/2603.09241) | [**Models**](https://huggingface.co/zmkun20/raenwm)
 
 > **Note:** This repository contains the official implementation of RAE-NWM. 
-> The pre-trained RAE-NWM weights and complete model cards will be released here soon.
+> RAE-NWM has been accepted to ECCV 2026. The pre-trained RAE-NWM weights are publicly available on Hugging Face.
 
 ## 📥 Installation & Setup
 
 First, clone the repository and navigate into the project directory:
 
 ```bash
-git clone https://github.com/zmkun20/raenwm.git
+git clone https://github.com/20robo/raenwm.git
 cd raenwm
 ```
 
@@ -84,7 +84,7 @@ hf download nyu-visionx/RAE-collections \
 ```
 
 ### 2. RAE-NWM Weights
-⏳ **[Coming Soon]** The pre-trained weights for our model will be released and linked here.
+The pre-trained RAE-NWM weights are released at [zmkun20/raenwm](https://huggingface.co/zmkun20/raenwm) under this repository's MIT license.
 
 ## 💻 Multi-GPU Support
 
@@ -162,7 +162,7 @@ python train_probe.py \
 
 ## 🙏 Acknowledgements
 
-Our project is inspired by and built upon [RAE](https://github.com/bytetriper/RAE), [NWM](https://github.com/facebookresearch/nwm), and [NoMaD](https://github.com/robodhruv/visualnav-transformer).
+Our project is inspired by and built upon [RAE](https://github.com/bytetriper/RAE), [NWM](https://github.com/facebookresearch/nwm), [NoMaD](https://github.com/robodhruv/visualnav-transformer), and [NOW](https://github.com/robotnav-bot/NOW.git).
 
 ## 📝 Citation
 
