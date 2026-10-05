@@ -2,7 +2,7 @@
 
 [**Paper**](https://arxiv.org/abs/2603.09241) | [**Models**](https://huggingface.co/zmkun20/raenwm)
 
-🎉 **RAE-NWM has been provisionally accepted to ECCV 2026!**
+🎉 **Accepted at ECCV 2026**
 
 > **Note:** This repository contains the official implementation of RAE-NWM. 
 > The pre-trained RAE-NWM weights are publicly available on Hugging Face.
